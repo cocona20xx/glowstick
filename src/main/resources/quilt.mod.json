@@ -10,10 +10,11 @@
 			"contributors": {
 				"author": "rin/cocona"
 			},
+			"license": "MPL-2.0"
 			"contact": {
 				"sources": "https://github.com/cocona20xx/retribution"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/retribution/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
