@@ -1,6 +1,7 @@
 plugins {
 	id 'maven-publish'
 	id 'org.quiltmc.loom' version '0.12.+'
+	id 'org.cadixdev.licenser' version '0.6.1'
 }
 
 archivesBaseName = project.archives_base_name
@@ -63,6 +64,11 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${archivesBaseName}" }
 	}
+}
+
+license {
+	header = project.file('HEADER.txt')
+	newLine(false)
 }
 
 // Configure the maven publication
