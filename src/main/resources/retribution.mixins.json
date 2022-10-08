@@ -1,13 +1,16 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "com.example.example_mod.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [],
-	"client": [
-		"TitleScreenMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cocona20xx.retribution.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "client": [
+    "BakedQuadMixin",
+    "ItemRenderMixin",
+    "JsonUnbakedModelMixin",
+    "ModelLoaderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

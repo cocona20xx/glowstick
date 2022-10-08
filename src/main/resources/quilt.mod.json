@@ -10,7 +10,7 @@
 			"contributors": {
 				"author": "rin/cocona"
 			},
-			"license": "MPL-2.0"
+			"license": "MPL-2.0",
 			"contact": {
 				"sources": "https://github.com/cocona20xx/retribution"
 			},
@@ -18,7 +18,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init_client": "cocona20xx.retribution.RetributionModClient"
 		},
 		"depends": [
 			{
