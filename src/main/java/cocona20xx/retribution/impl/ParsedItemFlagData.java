@@ -9,19 +9,6 @@ public class ParsedItemFlagData {
 	private String layer3 = null;
 	private String layer4 = null;
 
-	public boolean hasFlag(int id){
-		return switch (id){
-			case 0 -> !Objects.isNull(layer0);
-			case 1 -> !Objects.isNull(layer1);
-			case 2 -> !Objects.isNull(layer2);
-			case 3 -> !Objects.isNull(layer3);
-			case 4 -> !Objects.isNull(layer4);
-			default -> false;
-		};
-	}
-	public boolean hasAny(){
-		return hasFlag(0) || hasFlag(1) || hasFlag(2) || hasFlag(3) ||hasFlag(4);
-	}
 	public void setFlag(int id, String val){
 		switch (id){
 			case 0 -> layer0 = val;
@@ -40,6 +27,19 @@ public class ParsedItemFlagData {
 			case 3 -> layer3;
 			case 4 -> layer4;
 			default -> null;
+		};
+	}
+	public boolean hasAny(){
+		return Objects.nonNull(layer0) || Objects.nonNull(layer1) || Objects.nonNull(layer2) || Objects.nonNull(layer3) || Objects.nonNull(layer4);
+	}
+	public boolean hasId(int id){
+		return switch (id){
+			case 0 -> Objects.nonNull(layer0);
+			case 1 -> Objects.nonNull(layer1);
+			case 2 -> Objects.nonNull(layer2);
+			case 3 -> Objects.nonNull(layer3);
+			case 4 -> Objects.nonNull(layer4);
+			default -> false;
 		};
 	}
 }

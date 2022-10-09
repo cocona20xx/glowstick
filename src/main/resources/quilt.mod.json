@@ -18,7 +18,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init_client": "cocona20xx.retribution.RetributionModClient"
+			"client_init": "cocona20xx.retribution.RetributionModClient"
 		},
 		"depends": [
 			{

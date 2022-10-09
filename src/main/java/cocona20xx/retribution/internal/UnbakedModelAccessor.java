@@ -8,4 +8,6 @@ public interface UnbakedModelAccessor {
 	void setData(ParsedItemFlagData data);
 	void storeActual(JsonUnbakedModel model);
 	JsonUnbakedModel getActual();
+
+	ParsedItemFlagData getData();
 }
