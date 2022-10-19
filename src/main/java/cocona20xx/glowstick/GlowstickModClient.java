@@ -20,7 +20,6 @@ public class GlowstickModClient implements ClientModInitializer {
 	public static final int EMISSIVE_MODIFIER = 200;
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-		LOGGER.info("Glowstick is loading...");
 		ResourceLoader.get(ResourceType.CLIENT_RESOURCES).registerReloader(new EmissiveDataReloader());
 		ResourceLoader.get(ResourceType.CLIENT_RESOURCES).addReloaderOrdering(EmissiveDataReloader.RELOADER_ID, ResourceReloaderKeys.BEFORE_VANILLA);
 	}

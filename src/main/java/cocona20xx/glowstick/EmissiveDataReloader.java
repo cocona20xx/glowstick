@@ -25,11 +25,11 @@ public class EmissiveDataReloader implements SimpleSynchronousResourceReloader {
 	private static final ArrayList<String> BLACKLIST_LIST = Lists.newArrayList(PARENT_BLACKLIST);
 	public static final Identifier RELOADER_ID = new Identifier(GlowstickModClient.MOD_ID, "emissive");
 	public static final String ET_MEMBER_NAME = "emissive_textures";
-	private static final String[] flags = {"layer0", "layer1", "layer2", "layer3", "layer4"};
+	//private static final String[] flags = {"layer0", "layer1", "layer2", "layer3", "layer4"};
 
 	@Override
 	public void reload(ResourceManager manager) {
-		GlowstickModClient.LOGGER.info("Starting Emissive Load...");
+		GlowstickModClient.LOGGER.info("Loading Emissive Textures data...");
 		EMISSIVE_MAP.clear();
 		for(Identifier modelId : manager.findResources("models/item", path -> path.toString().endsWith(".json")).keySet()){
 			try {
@@ -95,6 +95,7 @@ public class EmissiveDataReloader implements SimpleSynchronousResourceReloader {
 		path = removeFirstIfValid(path, "models/");
 		path = removeFirstIfValid(path, "textures/");
 		path = removeFirstIfValid(path, "item");
+		path = removeFirstIfValid(path, "/");
 		return new Identifier(toSanitize.getNamespace(), path);
 	}
 

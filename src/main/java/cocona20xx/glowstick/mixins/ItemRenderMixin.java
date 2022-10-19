@@ -25,9 +25,7 @@ public class ItemRenderMixin {
 		if((wrap.getModifier() != 0 && block < 240)) {
 			short mod = (short) (block + wrap.getModifier());
 			mod = GlowstickModClient.shortMin(mod, (short) 240);
-			//short finalMod = (short) (mod >> 4);
-			int combined = (sky << 16) | (mod & 0xFFFF);
-			return combined;
+			return (sky << 16) | (mod & 0xFFFF);
 		}
 		else return light;
 	}

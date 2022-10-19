@@ -27,9 +27,6 @@ public class JsonUnbakedModelMixin{
 	@Inject(method = "createQuad", at = @At("RETURN"), cancellable = true)
 	private static void createQuadInjector(ModelElement element, ModelElementFace elementFace, Sprite sprite, Direction side, ModelBakeSettings settings, Identifier id, CallbackInfoReturnable<BakedQuad> cir){
 		BakedQuad initReturn = cir.getReturnValue();
-		if(sprite.getId().toString().contains("test")){
-			boolean useless = true;
-		}
 		if(EmissiveDataReloader.checkValidity(EmissiveDataReloader.sanitizeValidId(sprite.getId()), EmissiveDataReloader.sanitizeValidId(id))){
 			BakedQuadAccessor bakedQuadAccessor = (BakedQuadAccessor)initReturn;
 			bakedQuadAccessor.storeActual(initReturn);
