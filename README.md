@@ -22,6 +22,11 @@ Example: (at `assets/minecraft/models/item/stick.json`)
   ]
 }
 ```
+### How to use Glowstick as a mod dependency:
+If for some reason, you need to use Glowstick as a mod dependency, refer to the Modrinth developer tutorial on using its Maven:
+https://docs.modrinth.com/docs/tutorials/maven/
+
+
 ### License:
 Glowstick is licensed under the *Mozilla Public License, Version 2.0* (see the LICENSE file and the licensing header!)
 
