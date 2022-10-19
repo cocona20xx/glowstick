@@ -2,23 +2,22 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "cocona20xx",
-		"id": "retribution",
+		"id": "glowstick",
 		"version": "${version}",
 		"metadata": {
-			"name": "Retribution",
-			"description": "Random Entity Textures implementation mod.",
+			"name": "Glowstick",
+			"description": "Emissive Item Textures & Armor Overlays",
 			"contributors": {
 				"author": "rin/cocona"
 			},
 			"license": "MPL-2.0",
 			"contact": {
-				"sources": "https://github.com/cocona20xx/retribution"
 			},
-			"icon": "assets/retribution/icon.png"
+			"icon": "assets/glowstick/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"client_init": "cocona20xx.retribution.RetributionModClient"
+			"client_init": "cocona20xx.glowstick.GlowstickModClient"
 		},
 		"depends": [
 			{
@@ -35,5 +34,5 @@
 			}
 		]
 	},
-	"mixin": "retribution.mixins.json"
+	"mixin": "glowstick.mixins.json"
 }
